@@ -1,0 +1,272 @@
+:root {
+  --gray-150: #D8DFE8;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  --light-blue-100: #F3F5FC;
+  --dark-blue-200: #356EA9;
+  --dark-blue-300: #0A3871;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-blue-100);
+}
+
+header {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+}
+
+button {
+  border: 1px solid var(--dark-blue-300);
+  border-radius: 24px;
+  min-width: 332px;
+  width: 40%;
+  padding: 20px;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 400ms ease, color 400ms ease;
+}
+
+.body {
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.body-input {
+  padding: 150px 40px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.body-input-text {
+  max-width: 800px;
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-300);
+  flex: auto;
+}
+.body-input-text::-moz-placeholder {
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  color: var(--dark-blue-300);
+}
+.body-input-text:-ms-input-placeholder {
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  color: var(--dark-blue-300);
+}
+.body-input-text::placeholder {
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  color: var(--dark-blue-300);
+}
+.body-input p {
+  font-size: 0.75em;
+  color: var(--gray-400);
+  padding: 20px 0 15px;
+}
+.body-input p:before {
+  content: url(https://api.iconify.design/bi/exclamation-circle-fill.svg?color=%23495057);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.body-input-btn {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.body-input-btn #encrypting {
+  background-color: var(--dark-blue-300);
+  color: white;
+}
+.body-input-btn #encrypting:hover {
+  background-color: var(--gray-150);
+  color: var(--dark-blue-300);
+}
+.body-input-btn #decrypting {
+  background-color: var(--gray-150);
+  color: var(--dark-blue-300);
+}
+.body-input-btn #decrypting:hover {
+  background-color: var(--dark-blue-300);
+  color: white;
+}
+.body-output {
+  padding: 40px;
+  height: 100%;
+}
+.body-output-card {
+  width: 400px;
+  height: 100%;
+  padding: 32px;
+  border-radius: 32px;
+  background-color: white;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.body-output-card h3 {
+  font-size: 1.5em;
+  color: var(--gray-500);
+  margin: 32px 0 16px;
+}
+.body-output-card h4 {
+  font-size: 1em;
+  color: var(--gray-400);
+  line-height: 1.5;
+}
+.body-output-card-text {
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: var(--gray-4000);
+  text-align: start;
+  flex: auto;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+.body-output-card #copy {
+  background-color: white;
+  color: var(--dark-blue-300);
+  width: 100%;
+  margin-top: 32px;
+}
+.body-output-card #copy:hover {
+  background-color: var(--dark-blue-300);
+  color: white;
+}
+.body-output .to-hide {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(10, 56, 113, 0.04);
+}
+footer p {
+  padding: 13px 0;
+  font-size: 0.8em;
+  font-family: "Courier New", cursive;
+}
+footer .icons {
+  width: 150px;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+footer .iconify {
+  font-size: 1.7em;
+  color: var(--gray-400);
+  margin: 0 5px;
+  vertical-align: middle;
+  transition: font-size 0.25s ease;
+  height: 39px;
+}
+footer .iconify:hover {
+  font-size: 2.3em;
+  color: black;
+}
+footer .tooltip {
+  position: relative;
+}
+footer .tooltip::before {
+  content: attr(msg);
+  position: absolute;
+  left: -15.05px; /*46.8px icon*/
+  top: -200%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px 8px;
+  border-radius: 13px;
+  background-color: #C1C7D0;
+  color: black;
+  font-size: 0.7em;
+  font-style: italic;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+footer .tooltip::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 7px);
+  top: -80%;
+  width: 1px;
+  height: 1px;
+  border-top: 7px solid #C1C7D0;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+footer .tooltip:hover::before, footer .tooltip:hover::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    left: 40px;
+  }
+  .body {
+    height: auto;
+  }
+  .body-input {
+    padding: 150px 40px 24px;
+  }
+  .body-input-text {
+    min-height: 580px; /*49.5vh*/
+  }
+  .body-output-card {
+    width: 688px;
+  }
+  .body-output-card img {
+    display: none;
+  }
+  .body-output-card h3 {
+    margin: 0 0 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    left: 16px;
+  }
+  .body-input {
+    padding: 150px 16px 24px;
+    width: 100%;
+  }
+  .body-input-text {
+    min-height: 283px;
+  }
+  .body-output {
+    padding: 24px 16px;
+    width: 100%;
+  }
+  .body-output-card {
+    width: 100%;
+  }
+  .body-output #copy {
+    min-width: 100%;
+  }
+  footer {
+    flex-direction: column;
+  }
+}

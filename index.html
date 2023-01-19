@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de Textos</title>
+  <link rel="shortcut icon" href="assets/Top.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&family=Kalam:wght@700&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="https://www.aluracursos.com/" target="_blank" rel="noopener noreferrer"><img src="assets/Top.svg" alt="Logo Alura Company"></a>
+  </header>
+  <main>
+    <div class="body">
+      <div class="body-input">
+        <textarea class="body-input-text" placeholder="Ingrese el texto aquí."></textarea>
+        <p>Sólo letras minúsculas y sin acentos.</p>
+        <div class="body-input-btn">
+          <button id="encrypting">Encriptar</button>
+          <button id="decrypting">Desencriptar</button>
+        </div>
+      </div>
+      <div class="body-output">
+        <div id="face" class="body-output-card">
+          <img src="assets/loading1x.svg" alt="Loading...">
+          <h3>Ningún mensaje fue encontrado</h3>
+          <h4>Ingresa el texto que deseas encriptar o desencriptar.</h4>
+        </div>
+        <div id="to-show" class="body-output-card to-hide">
+          <p class="body-output-card-text"></p>
+          <button id="copy">Copiar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy Copyright 2023 Alura Latam</p>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/steverocha/" target="_blank" rel="noopener noreferrer"><i class="iconify" data-icon="mdi:linkedin"></i></a>
+      <a href="" target="_self" rel="noopener noreferrer" class="tooltip" msg="in-progress"><i class="iconify" data-icon="mingcute:home-3-fill"></i></a>
+      <a href="https://github.com/iSteve31" target="_blank" rel="noopener noreferrer"><i class="iconify" data-icon="mdi:github"></i></a>
+    </div>
+    <p>Site by <a href="https://www.linkedin.com/in/steverocha/" target="_blank" rel="noopener noreferrer"><strong>Steve Rocha</strong></a></p>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
